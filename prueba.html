@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Guatita - CHicharron</title>
+	<meta name="description" content="se vende guatita con chicharron">
+	<meta name="Author" content="Gabriel Martinez">
+	<meta name="keywords" content="Guatita, chicharron">
+
+</head>
+<body style="font-family: Century Gothic">
+
+
+	<h1 align="center">Tienda Yavirac - Platos a $0.75</h1>
+
+	<section style="text-align: center;">
+			
+		<p>Ven y disfruta las mejores Guatitas del Centro Historico</p>
+
+	</section>
+
+	<table align="center">
+		
+	<tr>
+		
+		<td><img src="Chicharron.jpg" height="180" width="400" id="imgTienda"></td>
+		<td>
+			
+		<table style="font-size: 20px">
+			
+			<tr> 
+
+				<td><label># de Chicharrones:</label></td>
+				<td><label><input type="text" id="idChicharron" onchange="totalSuma()" onkeypress="chicharrones()" style="font-size: 17px"/></label></td>
+
+			</tr>
+			<tr>
+					
+				<td><label># de Guatitas:</label></td>
+				<td><label><input type="text" id="idGuatita" onchange="totalSuma()" onkeypress="guatitas()" style="font-size: 17px"/></label></td>
+
+			</tr>
+
+			<tr>
+					
+				<td><span>Total Pedidos:</span></td>
+				<td><input type="text" id="idTotal" /></td>
+
+			</tr>
+
+		</table>
+
+		</td>
+
+	</tr>
+
+	</table>
+
+	<br/><br/>
+
+	<footer>
+		
+		<p align="center"><b>Copyright Gabriel Martinez</b></p>
+
+	</footer>
+
+</body>
+
+<script>
+	
+function totalSuma() {
+	var numeroChicharrones = document.getElementById("idChicharron").value;
+	var numeroGuatitas = document.getElementById("idGuatita").value;
+	var Total = 0;
+	Total = parseInt(numeroGuatitas) + parseInt(numeroChicharrones);
+	document.getElementById("idTotal").value = parseInt(Total);
+}
+
+function chicharrones() {
+	// totalSuma();
+	document.getElementById("imgTienda").src = "chicharron.jpg";
+}
+
+function guatitas() {
+	// totalSuma();
+	document.getElementById("imgTienda").src = "guatita.jpg";
+}
+
+
+</script>
+</html>
